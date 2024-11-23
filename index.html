@@ -124,28 +124,71 @@
         ></noscript>
         <!--  End Google Tag Manager (noscript)  -->
         <style>
-          .section.hero {
+         .section.hero {
     min-height: 100svh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: background-fade 15s infinite; /* Animate background */
+    background-size: cover; /* Ensure all images fill the section */
+    background-position: center; /* Center the images */
+    background-repeat: no-repeat; /* Avoid repetition */
+    animation: background-fade 20s infinite; /* Smooth transition between images */
 }
 
 @keyframes background-fade {
     0% {
         background-image: url('https://ivana27lita.github.io/yellowbull/images/yrr-battery.jpg');
+        background-size: contain; /* Ensure the first image is fully visible */
+        background-position: top center; /* Adjust position for the first image */
     }
-    33% {
+    25% {
         background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-39.jpg');
+        background-size: cover; /* Default for other images */
+        background-position: center; /* Center other images */
     }
-    66% {
+    50% {
         background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-38.jpg');
     }
-    100% {
+    75% {
         background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-26.jpg');
     }
+    100% {
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/yrr-battery.jpg');
+        background-size: contain; /* Return to fully visible first image */
+        background-position: top center;
+    }
 }
+          .see-more-wrapper {
+  text-align: center;
+  margin-top: 40px; /* Adjust spacing as needed */
+}
+
+.see-more-link {
+  font-size: 1.25rem; /* Adjust font size */
+  color: white; /* Match the hero section text */
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.see-more-link:hover {
+  color: #ffcc00; /* Add hover effect (e.g., yellow) */
+}
+
+.arrow-down {
+  display: inline-block;
+  font-size: 1.5rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
 
           .section {
             overflow-x: clip;
@@ -334,6 +377,14 @@
               </div>
               <div class="raised-button-back"></div>
             </a>
+            
+            <!-- New "See More" Section -->
+        <div class="see-more-wrapper">
+          <a href="#promo-section" class="see-more-link">
+            See More of Our Services <span class="arrow-down">↓</span>
+          </a>
+        </div>
+            
             <div class="hero-image-bg"></div>
           </div>
         </div>
@@ -341,7 +392,7 @@
     </section>
 
     <!--promo poster-->
-<section class="section">
+<section id="promo-section" class="section">
   <div class="section-wrapper">
     <div class="margin-bottom-24">
       <h2 data-direction="bottom" class="section-header text-center promo-header">
