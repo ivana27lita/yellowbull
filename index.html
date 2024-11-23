@@ -124,8 +124,12 @@
         ></noscript>
         <!--  End Google Tag Manager (noscript)  -->
         <style>
-         .section.hero {
-    min-height: 100svh;
+          <!--  changed section hero  -->
+         ..section.hero {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* This maintains a 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
     background-size: cover; /* Ensure all images fill the section */
     background-position: center; /* Center the images */
     background-repeat: no-repeat; /* Avoid repetition */
@@ -134,25 +138,19 @@
 
 @keyframes background-fade {
     0% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/yrr-battery.jpg');
-        background-size: contain; /* Ensure the first image is fully visible */
-        background-position: top center; /* Adjust position for the first image */
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/img1.jpg');
     }
     25% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-39.jpg');
-        background-size: cover; /* Default for other images */
-        background-position: center; /* Center other images */
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/img2.jpg');
     }
     50% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-38.jpg');
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/img3.jpg');
     }
     75% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-26.jpg');
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/img4.jpg');
     }
     100% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/yrr-battery.jpg');
-        background-size: contain; /* Return to fully visible first image */
-        background-position: top center;
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/img1.jpg')
     }
 }
           .see-more-wrapper {
@@ -171,7 +169,7 @@
 }
 
 .see-more-link:hover {
-  color: #ffcc00; /* Add hover effect (e.g., yellow) */
+  color: #ffcc00; 
 }
 
 .arrow-down {
