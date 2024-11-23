@@ -126,14 +126,27 @@
         <style>
           .section.hero {
     min-height: 100svh;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), url(https://ivana27lita.github.io/yellowbull/images/yrr-battery.jpg);
-    background-position: 0 0, 0 0;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover;
-    background-attachment: scroll, fixed;
-    align-items: center
-          }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: background-fade 15s infinite; /* Animate background */
+}
+
+@keyframes background-fade {
+    0% {
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/yrr-battery.jpg');
+    }
+    33% {
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-39.jpg');
+    }
+    66% {
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-38.jpg');
+    }
+    100% {
+        background-image: url('https://ivana27lita.github.io/yellowbull/images/Yellow-Ranger-26.jpg');
+    }
+}
+
           .section {
             overflow-x: clip;
           }
