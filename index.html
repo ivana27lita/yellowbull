@@ -124,56 +124,60 @@
         ></noscript>
         <!--  End Google Tag Manager (noscript)  -->
         <style>
-    .section.hero {
-    min-height: 100svh;
-    background-size: cover; /* Ensure all images fill the section */
-    background-position: center; /* Center the images */
-    background-repeat: no-repeat; /* Avoid repetition */
-    animation: background-fade 55s infinite; /* Smooth transition between images */
+/* Hero Content (Left Side) */
+.hero-content-wrapper {
+  flex: 1;
+  text-align: left;
+  color: white;
+  padding: 20px;
+}
+<!--
+.hero-eyebrow {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
-@keyframes background-fade {
-    0% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/safra-member.jpg');
-    }
-    20% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/cc2.jpg');
-    }
-    40% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/img2.webp');
-    }
-    60% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/img3.webp');
-    }
-    80% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/img4.webp');
-    }
-    100% {
-        background-image: url('https://ivana27lita.github.io/yellowbull/images/safra-member.jpg')
-    }
+.hero-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
+
+.raised-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.raised-button:hover {
+  background-color: #e6b800;
+} -->
 
 .see-more-wrapper {
-  text-align: center;
-  margin-top: 40px; /* Adjust spacing as needed */
+  margin-top: 20px;
 }
 
 .see-more-link {
-  font-size: 1.25rem; /* Adjust font size */
-  color: white; /* Match the hero section text */
+  color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.25rem;
   display: inline-block;
-  margin-top: 20px;
   transition: color 0.3s ease;
 }
 
 .see-more-link:hover {
-  color: #ffcc00; 
+  color: #ffcc00;
 }
 
 .arrow-down {
-  display: inline-block;
   font-size: 1.5rem;
   animation: bounce 1.5s infinite;
 }
@@ -184,6 +188,65 @@
   }
   50% {
     transform: translateY(5px);
+  }
+}
+
+/* Slideshow (Right Side) */
+.slideshow-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-slideshow {
+  display: flex;
+  width: 100%;
+  animation: slideshow 400s infinite;
+}
+
+.promo-slideshow img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Keyframes for Slideshow Animation */
+@keyframes slideshow {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-100%); }
+  45% { transform: translateX(-100%); }
+  50% { transform: translateX(-200%); }
+  70% { transform: translateX(-200%); }
+  75% { transform: translateX(-300%); }
+  95% { transform: translateX(-300%); }
+  100% { transform: translateX(-400%); }
+}
+
+/* Background Animation */
+@keyframes background-fade {
+  0% {
+    background-image: url('https://ivana27lita.github.io/yellowbull/images/safra-member.jpg');
+  }
+  20% {
+    background-image: url('https://ivana27lita.github.io/yellowbull/images/cc2.jpg');
+  }
+  40% {
+    background-image: url('https://ivana27lita.github.io/yellowbull/images/img2.webp');
+  }
+  60% {
+    background-image: url('https://ivana27lita.github.io/yellowbull/images/img3.webp');
+  }
+  80% {
+    background-image: url('https://ivana27lita.github.io/yellowbull/images/img4.webp');
+  }
+  100% {
+    background-image: url('https://ivana27lita.github.io/yellowbull/images/safra-member.jpg');
   }
 }
 
@@ -345,7 +408,7 @@
         </div>
       </div>
     </div>
-    <section class="section hero">
+    <!-- <section class="section hero">
       <div class="section-wrapper">
         <!--
         <div
@@ -384,12 +447,46 @@
             See More of Our Services <span class="arrow-down">↓</span>
           </a>
         </div>
+        
             
             <div class="hero-image-bg"></div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <section class="section hero">
+  <div class="section-wrapper">
+    <!-- Left Content: Hero Section -->
+    <div class="hero-content-wrapper">
+      <div class="hero-eyebrow">24/7 Roadside Assistance</div>
+      <h1 class="hero-header">Don't Let a Car Breakdown Ruin Your Day</h1>
+      <div class="body-text">
+        Yellow Bull gets to you fast — 30 mins rescue response
+      </div>
+      <a href="tel:+6591013232" class="raised-button">
+        <div class="raised-button-front">
+          <div>Tap for Immediate Assistance</div>
+        </div>
+      </a>
+      <div class="see-more-wrapper">
+        <a href="#promo-section" class="see-more-link">
+          See More of Our Services <span class="arrow-down">↓</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Content: Slideshow Poster -->
+    <div class="slideshow-wrapper">
+      <div class="promo-slideshow">
+        <img src="https://ivana27lita.github.io/yellowbull/images/safra-member.jpg" alt="Promo 1" />
+        <img src="https://ivana27lita.github.io/yellowbull/images/cc2.jpg" alt="Promo 2" />
+        <img src="https://ivana27lita.github.io/yellowbull/images/img2.webp" alt="Promo 3" />
+        <img src="https://ivana27lita.github.io/yellowbull/images/img3.webp" alt="Promo 4" />
+        <img src="https://ivana27lita.github.io/yellowbull/images/img4.webp" alt="Promo 5" />
+      </div>
+    </div>
+  </div>
+</section>
 
     <!--promo poster-->
 <section id="promo-section" class="section">
